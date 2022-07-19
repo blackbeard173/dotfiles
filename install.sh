@@ -12,6 +12,7 @@ nix-env -iA \
     nixpkgs.starship \
     nixpkgs.git \
     nixpkgs.gitui \
+    nixpkgs.lazygit \
     nixpkgs.fnm \
     nixpkgs.neovim \
     nixpkgs.tmux \
@@ -22,10 +23,12 @@ nix-env -iA \
     nixpkgs.bat \
     nixpkgs.tldr \
     nixpkgs.htop \
-    nixpkgs.gtop \
+    nixpkgs.bottom \
+    nixpkgs.dua \
     nixpkgs.tree \
     nixpkgs.zoxide \
     nixpkgs.fd \
+    nixpkgs.xplr \
     nixpkgs.neofetch \
     nixpkgs.gcc \
     nixpkgs.wget \
@@ -42,4 +45,4 @@ command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh) $USER
 
 # fnm
-fnm install v16.15.1 # replace with current lts
+fnm install v16.16.0 # replace with current lts
