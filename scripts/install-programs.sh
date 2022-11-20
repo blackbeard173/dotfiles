@@ -1,31 +1,56 @@
-#! /bin/bash
-#  https://search.nixos.org/packages
+#!/usr/bin/env bash
 
 # install packages
-nix-env -iA \
-  nixpkgs.bat \
-  nixpkgs.curl \
-  nixpkgs.dua \
-  nixpkgs.fd \
-  nixpkgs.fnm \
-  nixpkgs.fzf \
-  nixpkgs.gcc \
-  nixpkgs.git \
-  nixpkgs.gitui \
-  nixpkgs.htop \
-  nixpkgs.jq \
-  nixpkgs.lazygit \
-  nixpkgs.lsd \
-  nixpkgs.neofetch \
-  nixpkgs.neovim \
-  nixpkgs.ripgrep \
-  nixpkgs.starship \
-  nixpkgs.stow \
-  nixpkgs.tldr \
-  nixpkgs.tmux \
-  nixpkgs.trash-cli \
-  nixpkgs.tree \
-  nixpkgs.wget \
-  nixpkgs.zellij \
-  nixpkgs.zoxide \
-  nixpkgs.zsh
+# https://search.nixos.org/packages
+
+packages=(
+  ani-cli
+  bat
+  broot
+  cargo-update
+  circumflex
+  cmatrix
+  curl
+  dua
+  fd
+  fnm
+  fzf
+  gcc
+  gh
+  git
+  gitui
+  helix
+  htop
+  just
+  kondo
+  lazydocker
+  lazygit
+  lf
+  lsd
+  mpv-with-scripts
+  ncdu
+  neofetch
+  neovim
+  python3
+  ripgrep
+  rsync
+  speedtest-cli
+  spotdl
+  starship
+  stow
+  tealdeer
+  tmux
+  topgrade
+  trash-cli
+  tree
+  wget
+  youtube-dl
+  yt-dlp
+  zellij
+  zoxide
+  zsh
+)
+
+for package in "${packages[@]}"; do
+  nix-env -iA nixpkgs."$package"
+done
