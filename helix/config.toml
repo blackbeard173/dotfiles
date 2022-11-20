@@ -1,0 +1,19 @@
+theme = 'tokyonight'
+
+[editor]
+mouse = true
+line-number = 'relative'
+cursorline = true
+true-color = true
+auto-completion = true
+auto-format = true
+color-modes = true
+
+[editor.lsp]
+display-messages = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = true
