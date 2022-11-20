@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+spotdl --dt=8 $1

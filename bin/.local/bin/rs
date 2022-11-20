@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+rsync -azvhP $1 $2

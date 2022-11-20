@@ -1,0 +1,8 @@
+rsync -azvhP [Source] [DESTINATION]
+
+# -a = archive
+# -z = compress
+# -v = verbose
+# -h = human readable
+# -P = progress
+# --dry-run = test run
