@@ -22,10 +22,10 @@ export XDG_RUNTIME_DIR="$HOME/.local/run"
 export XDG_DATA_DIRS="/usr/local/share:/usr/share"
 export XDG_CONFIG_DIRS="/etc/xdg"
 ## pnpm
-export PNPM_HOME="/home/blackbeard/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # deno
-export DENO_INSTALL="/home/blackbeard/.deno"
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # set PATH so it includes user's private bin if it exists
@@ -96,8 +96,10 @@ source "$HOME/.cargo/env"
 
 eval "$(starship init bash)"
 
+eval "$(zoxide init bash)"
+
 # pnpm --silent dlx stoic-quotes-cli
 
 # cmatrix -aC red
 
-# era
+era
