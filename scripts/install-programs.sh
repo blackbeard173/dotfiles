@@ -5,6 +5,8 @@
 
 packages=(
   ani-cli
+  aria2
+  axel
   bat
   broot
   cargo-update
@@ -12,13 +14,17 @@ packages=(
   cmatrix
   curl
   dua
+  exa
   fd
+  ffmpeg-full
   fnm
   fzf
   gcc
+  gfold
   gh
   git
   gitui
+  gum
   helix
   htop
   just
@@ -31,6 +37,8 @@ packages=(
   ncdu
   neofetch
   neovim
+  newsboat
+  pfetch
   python3
   ripgrep
   rsync
@@ -40,8 +48,7 @@ packages=(
   stow
   tealdeer
   tmux
-  topgrade
-  trash-cli
+  trashy
   tree
   wget
   youtube-dl
