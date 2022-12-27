@@ -70,7 +70,7 @@ alias ~='cd ~'
 alias mv='mv -iv'
 alias cp='cp -iv'
 # alias rm='rm -iv'
-alias rm='trash-put'
+alias rm='trash'
 
 alias mkdir='mkdir -p'
 
@@ -78,8 +78,8 @@ alias cls='clear'
 
 alias bashcfg='nano ~/.bashrc'
 
-alias ls='lsd -a'
-alias ll='lsd -la'
+alias ls='exa -a'
+alias ll='exa -la'
 
 alias pn='pnpm'
 alias px='pnpm dlx'
@@ -89,10 +89,11 @@ alias nixclean='nix-collect-garbage -d'
 alias nixrm='nix-env -e'
 alias nixupall="nix-env -u '*'"
 alias nixup='nix-env -u'
+alias zellij='zellij -l compact options --simplified-ui true'
 
 eval "$(fnm env --use-on-cd)"
 
-source "$HOME/.cargo/env"
+# source "$HOME/.cargo/env"
 
 eval "$(starship init bash)"
 
@@ -102,4 +103,6 @@ eval "$(zoxide init bash)"
 
 # cmatrix -aC red
 
-era
+# era
+
+# nu
