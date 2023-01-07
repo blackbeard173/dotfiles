@@ -2,12 +2,17 @@ theme = 'tokyonight'
 
 [editor]
 mouse = true
-line-number = 'relative'
 cursorline = true
-true-color = true
+gutters = ["diagnostics", "spacer", "diff"]
 auto-completion = true
 auto-format = true
+true-color = true
+bufferline = "multiple"
 color-modes = true
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
 
 [editor.lsp]
 display-messages = true
@@ -17,3 +22,6 @@ insert = "bar"
 
 [editor.file-picker]
 hidden = false
+
+[editor.indent-guides]
+render = true
