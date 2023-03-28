@@ -89,7 +89,9 @@ alias nixclean='nix-collect-garbage -d'
 alias nixrm='nix-env -e'
 alias nixupall="nix-env -u '*'"
 alias nixup='nix-env -u'
-alias zellij='zellij -l compact options --simplified-ui true'
+alias ze='zellij'
+
+alias v='nvim'
 
 eval "$(fnm env --use-on-cd)"
 
