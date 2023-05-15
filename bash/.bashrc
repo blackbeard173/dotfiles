@@ -29,8 +29,8 @@ export PATH="$PNPM_HOME:$PATH"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 
 ## deno
-# export DENO_INSTALL="$HOME/.deno"
-# export PATH="$DENO_INSTALL/bin:$PATH"
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.bin" ]; then
@@ -38,6 +38,9 @@ if [ -d "$HOME/.bin" ]; then
 fi
 if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
+fi
+if [ -d "$HOME/.local/share/pnpm" ]; then
+    PATH="$HOME/.local/share/pnpm:$PATH"
 fi
 
 # shopt
@@ -85,7 +88,6 @@ alias nixupall="nix-env -u '*'"
 alias pn='pnpm'
 alias pnpx='pnpm dlx'
 alias px='pnpm dlx'
-alias rm='trash'
 alias v='nvim'
 alias ze='zellij'
 
@@ -96,3 +98,5 @@ alias ze='zellij'
 eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
+
+fish
