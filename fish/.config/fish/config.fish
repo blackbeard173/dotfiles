@@ -1,13 +1,7 @@
 set -U fish_greeting
 
-# aliases
-alias ls "exa -la"
-alias v "nvim"
-alias fishy "nvim $HOME/.config/fish/config.fish" 
+if test -e /home/ubuntu/.nix-profile/etc/profile.d/nix.fish; . /home/ubuntu/.nix-profile/etc/profile.d/nix.fish;
 
-fish_add_path $HOME/.local/bin/
-
-if set -q ZELLIJ
-else
-  zellij
-end
+starship init fish | source
+zoxide init fish | source
+fnm env --use-on-cd | source
