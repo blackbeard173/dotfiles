@@ -43,19 +43,25 @@ function install_packages() {
         packages=(
                 bat
                 exa
+                fd
                 fish
                 fnm
                 fzf
-                git
                 gcc
+                gh
+                git
+                gitui
                 helix
+                neo
                 neovim
                 ripgrep
                 shellcheck
                 shfmt
+                starship
                 stow
-                tree-sitter
                 tldr
+                tree-sitter
+                zoxide
         )
         for package in "${packages[@]}"; do
                 echo "📦 Installing $package"
