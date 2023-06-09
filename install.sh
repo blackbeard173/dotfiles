@@ -7,14 +7,15 @@ GH_SSH_PUBLIC="${GH_SSH_PRIVATE}.pub"
 GH_EMAIL="67589385+blackbeard173@users.noreply.github.com"
 
 function repo_change() {
-        sudo apt install curl wget git build-essential apt-transport-https dirmngr
+        sudo apt update -y
+        sudo apt autoremove -y && sudo apt autoclean -y
+        sudo apt install curl wget git build-essential apt-transport-https dirmngr -y
 
         echo '#unstable repos
 deb https://deb.debian.org/debian/ unstable main contrib non-free non-free-firmware
 deb-src https://deb.debian.org/debian/ unstable main contrib non-free non-free-firmware' | sudo tee /etc/apt/sources.list
 
-        sudo apt autoremove && sudo apt autoclean
-        sudo apt update && sudo apt full-upgrade
+        sudo apt update -y && sudo apt full-upgrade -y
 }
 
 function install_nix() {
@@ -73,6 +74,9 @@ function generate_ssh() {
                 echo "- - - - -"
                 cat "$GH_SSH_PUBLIC"
                 echo "- - - - -"
+                echo "Press Enter to continue..."
+                read -r
+                echo "Continuing with the script..."
         fi
 }
 
@@ -86,6 +90,7 @@ function dotfiles_clone() {
 }
 
 repo_change
+install_nix
 install_packages
 generate_ssh
 dotfiles_clone
