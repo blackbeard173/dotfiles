@@ -6,15 +6,17 @@ GH_SSH_PRIVATE="$HOME/.ssh/id_ed25519"
 GH_SSH_PUBLIC="${GH_SSH_PRIVATE}.pub"
 GH_EMAIL="67589385+blackbeard173@users.noreply.github.com"
 
-function repo_change() {
+function update_system() {
         sudo apt update -y
         sudo apt autoremove -y && sudo apt autoclean -y
         sudo apt install curl wget git build-essential apt-transport-https dirmngr -y
+        sudo apt update -y && sudo apt full-upgrade -y
+}
 
+function repo_change() {
         echo '#unstable repos
 deb https://deb.debian.org/debian/ unstable main contrib non-free non-free-firmware
 deb-src https://deb.debian.org/debian/ unstable main contrib non-free non-free-firmware' | sudo tee /etc/apt/sources.list
-
         sudo apt update -y && sudo apt full-upgrade -y
 }
 
@@ -52,6 +54,8 @@ function install_packages() {
                 git
                 gitui
                 helix
+                lazygit
+                ncdu
                 neo
                 neovim
                 ripgrep
@@ -60,6 +64,7 @@ function install_packages() {
                 starship
                 stow
                 tldr
+                tree
                 tree-sitter
                 zoxide
         )
@@ -95,7 +100,8 @@ function dotfiles_clone() {
         fi
 }
 
-repo_change
+update_system
+#repo_change
 install_nix
 install_packages
 generate_ssh
