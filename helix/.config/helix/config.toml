@@ -1,0 +1,36 @@
+theme='fleet_dark'
+
+[editor]
+cursorline=true
+true-color=true
+rulers=[120]
+bufferline='multiple'
+color-modes=true
+
+[editor.lsp]
+display-messages=true
+display-inlay-hints=true
+display-signature-help-docs=true
+
+[editor.cursor-shape]
+normal='block'
+insert='bar'
+select='underline'
+
+[editor.whitespace]
+render='none'
+
+[editor.indent-guides]
+render=true
+
+[editor.soft-wrap]
+enable=true
+wrap-indicator=''
+
+[keys.normal]
+C-o=':config-open'
+C-r=':config-reload'
+C-s=':w'
+A-f=':format'
+A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
