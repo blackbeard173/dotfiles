@@ -9,4 +9,4 @@ fi
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$HOME/.local/bin:$PNPM_HOME:$PATH"
 
-fish
+source "$HOME/.bashrc"
