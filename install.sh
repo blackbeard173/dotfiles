@@ -14,8 +14,7 @@ function update_system() {
 }
 
 function repo_change() {
-        echo '#unstable repos
-deb https://deb.debian.org/debian/ unstable main contrib non-free non-free-firmware
+        echo 'deb https://deb.debian.org/debian/ unstable main contrib non-free non-free-firmware
 deb-src https://deb.debian.org/debian/ unstable main contrib non-free non-free-firmware' | sudo tee /etc/apt/sources.list
         sudo apt update -y && sudo apt full-upgrade -y
 }
