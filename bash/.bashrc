@@ -7,6 +7,8 @@ if [ -e /home/ghost/.nix-profile/etc/profile.d/nix.sh ]; then
 	. /home/ghost/.nix-profile/etc/profile.d/nix.sh
 fi
 
+. ~/.nix-profile/etc/profile.d/hm-session-vars.sh
+
 HISTCONTROL=ignoreboth
 HISTFILESIZE=2000
 HISTSIZE=1000
