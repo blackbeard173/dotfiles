@@ -1,0 +1,7 @@
+[user]
+	email = 67589385+blackbeard173@users.noreply.github.com
+	name = Blackbeard
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = main
