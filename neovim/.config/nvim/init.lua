@@ -8,6 +8,9 @@ vim.o.smartcase = true
 vim.o.winbar = "%t %m %h"
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+require("keymaps")
 require("lazynvim")
 
 vim.cmd.colorscheme("carbonfox")
