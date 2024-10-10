@@ -1,5 +1,5 @@
 local wezterm = require("wezterm")
 local config = {}
-config.font = wezterm.font("BerkeleyMono Nerd Font")
+config.color_scheme = "Aura (Gogh)"
 config.font_size = 14
 return config
